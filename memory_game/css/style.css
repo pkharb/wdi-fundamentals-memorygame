@@ -1,0 +1,86 @@
+body{
+	text-align: center;
+	margin: 0;
+}
+h1{
+	font-family: raleway, serif;
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 45px;
+	margin: 0;
+}
+h3{
+	font-family: raleway, serif;
+	color: #f15b31;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 18px;
+}
+h2{
+	font-family: raleway, serif;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 20px;
+}
+p{
+	font-family: "droid serif";
+	line-height: 26px;
+	font-size: 18px;
+}
+header{
+	background-color: #f15b31;
+	color: #ffffff;
+	padding: 30px 20px;
+}
+nav{
+	background-color: #00a6b3;
+	color: #ffffff;
+	padding: 20px 0;
+}
+a{
+	margin: 0 20px;
+	font-family: raleway, serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+a:hover {
+	border-bottom: 2px solid transparent;
+	border-color: white;
+}
+main{
+	width: 850px;
+	margin: 35px auto;
+}
+img{
+	margin: 40px 8px 0 8px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    content: " ";
+    clear: both;
+    height: 0;
+    font-size: 0;
+}
+.name{
+	color: #f15b31;
+	font-weight: 700;
+}
+footer{
+	font-family: raleway, serif;
+	background: #0c231f;
+	color: white;
+	text-transform: uppercase;
+
+}
+.copyright{
+	float: left;
+	padding: 0 20px;
+}
+.message{
+	float: right;
+}
