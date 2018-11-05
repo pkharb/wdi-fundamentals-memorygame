@@ -25,51 +25,59 @@ var cards = [
 
 var cardsInPlay = [];
 
-/*var checkForMatch = function() {
-  setAttribute
-	
-}
-*/
+
+
 var flipCard = function() {
 
-    var cardId = this.getAttribute(i);
-    cardsInPlay[cardId] =  this.setAttribute('src', cards[cardId].cardImage);
+    var cardId = this.getAttribute('data-id');
+        this.setAttribute('src', cards[cardId].cardImage);
+        cardsInPlay.push(cards[cardId].rank);
+	      
 
-	     console.log("User flipped " + cards.rank);
-    //cardsInPlay.push(cards.rank);
-    //console.log(cards.cardImage);
-    //checkForMatch(cards.suit);
-    if(cardsInPlay[0] === cardsInPlay[1]){
-         alert("You found a match!");
-     }
-     else{
-       alert("Sorry, try again");
-     }
+  
+ 
+
+    if(cardsInPlay.length === 2){ 
+           if (cardsInPlay[0] === cardsInPlay[1]) {
+                   alert("You found a match!");
+                 }
+                 else{
+                    alert("Sorry, try again");
+                      }
+            cardsInPlay.length = 0;
+      }
+     console.log(cardsInPlay);
+     
 
 }
+
+
+         
+    
+     
 
 
 
 var createBoard = function() {
 
       for (var i = 0; i < cards.length; i++) {
-           var cardElement = [];
-           cardElement[i] = document.createElement('img');
-           cardElement[i].setAttribute('src', 'images/back.png');
-           //cardsInPlay.setAttribute();
-           console.log(cardElement[i]);
-           //cardElement.setAttribute(cards[i]);
-           //console.log(cardElement);
-           document.getElementById('game-board').appendChild(cardElement[i]);
-
+           var cardElement = document.createElement('img');
+           cardElement.setAttribute('src', 'images/back.png');
+           cardElement.setAttribute('data-id', i);
            cardElement.addEventListener('click', flipCard);
+           document.getElementById('game-board').appendChild(cardElement);
+  
+           console.log(cardElement);
+        
+           
+
+           
            
           }
 
-};
+}
 
 createBoard();
 
 
-//<img src="images/queen-of-diamonds.png" alt="Queen of Diamonds">
 
